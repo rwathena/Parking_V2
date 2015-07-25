@@ -9,33 +9,33 @@
         android:id="@+id/car_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
 
     <TextView
         android:id="@+id/earning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
 
     <TextView
         android:id="@+id/starttime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
 
     <TextView
         android:id="@+id/endtime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
 
     <TextView
         android:id="@+id/parking_addr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
 
 </LinearLayout>

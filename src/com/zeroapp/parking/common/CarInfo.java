@@ -33,8 +33,8 @@ public class CarInfo {
     /**
      * 用户ID
      */
-    private int userID = -1;
-    private int biddingID = -1;
+	private int userID = 0;
+	private int biddingID = 0;
     /**
      * 该车当前的状态,分为两部分
      * _之前标示该车是否可以抢广告;

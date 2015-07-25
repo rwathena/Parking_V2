@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="姓名: "
-            android:textSize="20sp" />
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/user_name"
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="手机："
-            android:textSize="20sp" />
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/user_phone"
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="身份证号："
-            android:textSize="20sp" />
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/user_idnum"
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="我的车辆 ："
-                android:textSize="20sp" />
+                android:textSize="10sp" />
 
             <ProgressBar
                 android:id="@+id/loading"
@@ -89,7 +89,7 @@
         <ListView
             android:id="@+id/lv_cars"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:verticalSpacing="2dp" />
     </LinearLayout>
