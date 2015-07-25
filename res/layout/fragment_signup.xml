@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg" >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:orientation="horizontal" 
+            android:gravity="center">
+            <TextView 
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textSize="24sp"
+            	android:textColor="#4F4F4F"
+            	android:text="@string/signup"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dip"
+        android:layout_marginLeft="45dip"
+        android:layout_marginRight="60dip"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/account" />
+            <EditText
+                android:id="@+id/register_account"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+	            android:maxLength="10"
+	            android:textSize="16sp"
+	            android:hint="@string/register_account_hint"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/pssword" />
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="@string/register_account_hint"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/phone_number" />
+            <EditText
+                android:id="@+id/register_phone"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textSize="16sp"
+                android:hint="@string/register_account_hint"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+        <!-- <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="昵称：" />
+            <EditText
+                android:id="@+id/register_nick"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="不能为空"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+        -->
+         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/sex" />
+            <RadioGroup 
+                android:id="@+id/register_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/register_radio_nan"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/male"/>
+	            <RadioButton 
+	                android:id="@+id/register_radio_nv"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/famale"/>
+            </RadioGroup>
+        </LinearLayout>
+                <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <CheckBox
+                android:id="@+id/cb_ifadvertisingman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/cb_check"
+                android:textColor="#4F4F4F"
+                android:textSize="16sp"
+                android:text="@string/tobe_advertising_man" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <CheckBox
+                android:id="@+id/cb_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/cb_check"
+                android:textColor="#4F4F4F"
+                android:textSize="16sp"
+                android:text="@string/agreement" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/rigister_btn_cancel"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:background="@drawable/login_btn_selector"
+                android:gravity="center"
+                android:text="@string/cancel" />
+            <Button
+                android:id="@+id/rigister_btn_register"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:background="@drawable/login_btn_selector"
+                android:gravity="center"
+                android:text="@string/signup" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

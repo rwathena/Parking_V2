@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_button_nor" >
+    <LinearLayout 
+        android:id="@+id/ll_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dip"
+        android:layout_marginRight="60dip"
+        android:orientation="vertical" 
+        android:background="@drawable/login_bg" 
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="账号：" />
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+	            android:maxLength="10"
+	            android:textSize="16sp"
+	            android:hint="输入账号"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="密码：" />
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:inputType="textPassword"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+         
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/btn_signup"
+                android:layout_width="110dip"
+                android:layout_height="35dip"
+                android:background="@drawable/login_btn_selector"
+                android:gravity="center"
+                android:text="注册" />
+            <Button
+                android:id="@+id/btn_signin"
+                android:layout_width="110dip"
+                android:layout_height="35dip"
+                android:background="@drawable/login_btn_selector"
+                android:gravity="center"
+                android:text="登陆" />
+        </LinearLayout>
+    </LinearLayout>
+     <ProgressBar
+        android:id="@+id/loading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/progress_loading" 
+        android:visibility="invisible"/>
+</FrameLayout>
