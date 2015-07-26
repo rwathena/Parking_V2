@@ -136,6 +136,8 @@ public class BusinessFragment extends BaseFragment {
                             Bidding b = new Bidding();
                             b.setBusinessID(c.getBusinessID());
                             b.setUserID(mainActivity.me.getUserID());
+                            b.setTimeEnd(c.getTimeEnd());
+                            b.setTimeStart(c.getTimeStart());
                             ClientServerMessage m = new ClientServerMessage();
                             m.setMessageType(MessageConst.MessageType.MSG_TYPE_COMPANY_CREATE_BIDDING);
                             m.setMessageContent(JsonTool.getString(b));
