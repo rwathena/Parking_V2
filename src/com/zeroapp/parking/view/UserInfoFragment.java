@@ -262,12 +262,21 @@ public class UserInfoFragment extends BaseFragment implements OnLongClickListene
             if (i < cars.size()) {
                 TextView carNum = (TextView) v.findViewById(R.id.car_num);
                 TextView carState = (TextView) v.findViewById(R.id.car_state);
+                Button carUpLoadBtn = (Button) v.findViewById(R.id.car_update_pinfo_btn);
                 carNum.setText(cars.get(i).getCarNum());
                 carState.setText(cars.get(i).getCarState());
+                carUpLoadBtn.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						Intent myIntent = new Intent(mainActivity, LocationActivity.class);
+						mainActivity.startActivity(myIntent);
+					}
+				});
             } else {
                 TextView t = new TextView(mainActivity);
-                t.setText("add!!");
-                t.setTextSize(60);
+                t.setText("Add cars");
+                t.setTextSize(30);
                 LayoutParams lp = group.getLayoutParams();
                 lp.height = LayoutParams.WRAP_CONTENT;
                 lp.width = LayoutParams.MATCH_PARENT;

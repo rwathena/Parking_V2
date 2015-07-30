@@ -9,12 +9,20 @@
         android:id="@+id/car_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:textSize="20sp" />
     <TextView
         android:id="@+id/car_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_weight="1"
         android:textSize="20sp" />
+    <Button 
+        android:id="@+id/car_update_pinfo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Parking"
+        android:textSize="20sp"
+        />
 
 </LinearLayout>

@@ -69,7 +69,6 @@ public class LocationActivity extends Activity implements Tracer {
         Log.e("+++ ON CREATE +++");
         setContentView(R.layout.activity_locate);
         initParkingInfos();
-
         lvCarsParingInfo = (ListView) findViewById(R.id.lv_car_parking);
         lvCarsParingInfo.setAdapter(new CarParkingAdeptet(this, mParkingList));
 
@@ -122,6 +121,7 @@ public class LocationActivity extends Activity implements Tracer {
     private void testUpdateParkingInfo() {
         long t = System.currentTimeMillis();
         ParkingInfo p = mParkingList.get(0);
+        p.setUserId(UserActivity.mUserActivity.me.getUserID());
         p.setLocationLatitude(l.getLatitude());
         p.setLocationLongitude(l.getLongitude());
         p.setTimeStart(t - 3200000);
@@ -129,7 +129,9 @@ public class LocationActivity extends Activity implements Tracer {
         ClientServerMessage m = new ClientServerMessage();
         m.setMessageType(MessageConst.MessageType.MSG_TYPE_USER_SEND_PARK_INFO);
         m.setMessageContent(JsonTool.getString(p));
-//        UserActivity.getBox().sendMessage(m);
+        UserActivity.mUserActivity.mService.sendMessageToServer(m);
+        Log.i(t+"\n"+t+3600*24*30*12);
+        Log.i("time "+new java.util.Date(t));
         Log.i("send over");
         
     }
@@ -221,7 +223,23 @@ public class LocationActivity extends Activity implements Tracer {
 
         private List<ParkingInfo> parkings = null;
         private Context mContext = null;;
+        OnClickListener listener = new OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.btn_start_parking) {
+                    Log.i("btnStartParking");
+                    long t = MyTime.getLongTime(((LocationActivity) mContext).l.getTime());
+                    ((ParkingInfo) v.getTag()).setTimeStart(t);
+                }
+                if (v.getId() == R.id.btn_stop_parking) {
+                    Log.i("btnStopParking");
+                    long t = MyTime.getLongTime(((LocationActivity) mContext).l.getTime());
+                    ((ParkingInfo) v.getTag()).setTimeEnd(t);
+                }
+            }
+        };
+        
         public CarParkingAdeptet(Context ctx, List<ParkingInfo> l) {
             this.mContext = ctx;
             parkings = l;
@@ -261,25 +279,9 @@ public class LocationActivity extends Activity implements Tracer {
 //                h.btnStopParking.setVisibility(parkings.get(i).getTimeStart() != 0 ? View.VISIBLE : View.INVISIBLE);
                 h.btnStartParking.setTag(parkings.get(i));
                 h.btnStopParking.setTag(parkings.get(i));
+                h.btnStartParking.setOnClickListener(listener);
+                h.btnStopParking.setOnClickListener(listener);
             }
-            OnClickListener listener = new OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    if (v == h.btnStartParking) {
-                        Log.i("btnStartParking");
-                        long t = MyTime.getLongTime(((LocationActivity) mContext).l.getTime());
-                        ((ParkingInfo) v.getTag()).setTimeStart(t);
-                    }
-                    if (v == h.btnStopParking) {
-                        Log.i("btnStopParking");
-                        long t = MyTime.getLongTime(((LocationActivity) mContext).l.getTime());
-                        ((ParkingInfo) v.getTag()).setTimeEnd(t);
-                    }
-                }
-            };
-            h.btnStartParking.setOnClickListener(listener);
-            h.btnStopParking.setOnClickListener(listener);
 
             return v;
         }

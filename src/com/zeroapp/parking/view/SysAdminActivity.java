@@ -361,8 +361,8 @@ public class SysAdminActivity extends BaseActivity implements OnClickListener {
 				carState.setText(cars.get(i).getCarState());
 			} else {
 				TextView t = new TextView(SysAdminActivity.this);
-				t.setText("add!!");
-				t.setTextSize(60);
+				t.setText("Add cars");
+				t.setTextSize(30);
 				LayoutParams lp = group.getLayoutParams();
 				lp.height = LayoutParams.WRAP_CONTENT;
 				lp.width = LayoutParams.MATCH_PARENT;

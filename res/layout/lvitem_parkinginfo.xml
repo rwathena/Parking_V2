@@ -10,32 +10,32 @@
         android:id="@+id/car_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
     <TextView
         android:id="@+id/park_start_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
     <TextView
         android:id="@+id/park_end_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
      <Button
         android:id="@+id/btn_start_parking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:text="开始计时"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
      <Button
         android:id="@+id/btn_stop_parking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="10dp"
         android:text="停止计时"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
 
 </LinearLayout>

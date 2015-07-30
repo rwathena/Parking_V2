@@ -47,6 +47,7 @@ public class UserActivity extends BaseActivity implements OnClickListener {
     private TextView balance = null;
     private long mExitTime = 0;
     private int lastClick = 0;// 记录上次点击的viewid,用于防止重复点击的逻辑
+    public static UserActivity mUserActivity;
 
 
 	@Override
@@ -57,6 +58,7 @@ public class UserActivity extends BaseActivity implements OnClickListener {
         setContentView(R.layout.activity_user);
 		initView();
         initUser();
+        mUserActivity = UserActivity.this;
 	}
 	@Override
 	public void onStart() {
