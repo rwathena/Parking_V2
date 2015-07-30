@@ -213,21 +213,21 @@ public class BusinessFragment extends BaseFragment {
         public View getView(int i, View v, ViewGroup group) {
             LayoutInflater inflater = LayoutInflater.from(mContext);
             v = inflater.inflate(R.layout.lvitem_business, null);
-            TextView num = (TextView) v.findViewById(R.id.num);
+//            TextView num = (TextView) v.findViewById(R.id.num);
             TextView areaName = (TextView) v.findViewById(R.id.area_name);
             TextView userNum = (TextView) v.findViewById(R.id.max_user_num);
             TextView startTime = (TextView) v.findViewById(R.id.starttime);
             TextView endTime = (TextView) v.findViewById(R.id.endtime);
             TextView cost = (TextView) v.findViewById(R.id.cost);
             if (i == 0) {
-                num.setText("  ");
+//                num.setText("  ");
                 areaName.setText("区域");
                 userNum.setText("容量");
                 startTime.setText("起始时间");
                 endTime.setText("结束时间");
                 cost.setText("成本");
             } else {
-                num.setText(i + "");
+//                num.setText(i + "");
                 areaName.setText(businesses.get(i - 1).getAreaName());
                 userNum.setText(businesses.get(i - 1).getMaxUserCount() + "");//
                 startTime.setText(businesses.get(i - 1).getTimeStart());

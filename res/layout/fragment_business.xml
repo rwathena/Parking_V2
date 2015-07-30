@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="城市: "
-                android:textSize="36sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/city_name"
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="可选列表 ："
-                android:textSize="36sp" />
+                android:textSize="20sp" />
 
             <ListView
                 android:id="@+id/lv_business"

@@ -192,21 +192,21 @@ public class BiddingFragment extends BaseFragment {
         public View getView(int i, View v, ViewGroup group) {
             LayoutInflater inflater = LayoutInflater.from(mContext);
             v = inflater.inflate(R.layout.lvitem_biddings, null);
-            TextView num = (TextView) v.findViewById(R.id.num);
+//            TextView num = (TextView) v.findViewById(R.id.num);
             TextView earning = (TextView) v.findViewById(R.id.earning);
             TextView areaName = (TextView) v.findViewById(R.id.area_name);
             TextView company = (TextView) v.findViewById(R.id.company_name);
             TextView startTime = (TextView) v.findViewById(R.id.starttime);
             TextView endTime = (TextView) v.findViewById(R.id.endtime);
             if (i == 0) {
-                num.setText("  ");
+//                num.setText("  ");
                 earning.setText("收益");
                 areaName.setText("区域");
                 company.setText("公司");
                 startTime.setText("起始时间");
                 endTime.setText("结束时间");
             } else {
-                num.setText(i + "");
+//                num.setText(i + "");
                 earning.setText(biddings.get(i - 1).getEarnings() + "");
                 areaName.setText(biddings.get(i - 1).getAreaName());
                 company.setText(biddings.get(i - 1).getComName());
