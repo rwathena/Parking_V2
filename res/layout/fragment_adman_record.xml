@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="我的: "
-                android:textSize="36sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/wode_name"
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="最近十天："
-                android:textSize="36sp" />
+                android:textSize="16sp" />
 
             <ListView
                 android:id="@+id/lv_total"

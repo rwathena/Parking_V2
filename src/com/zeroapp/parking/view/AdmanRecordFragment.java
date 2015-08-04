@@ -153,7 +153,7 @@ public class AdmanRecordFragment extends BaseFragment {
         // TODO show on UI
         // test code
         TextView t = new TextView(mainActivity);
-        t.setText("get Total success!");
+//        t.setText("get Total success!");
         LayoutParams lp = llTotal.getLayoutParams();
         lp.height = LayoutParams.WRAP_CONTENT;
         lp.width = LayoutParams.MATCH_PARENT;

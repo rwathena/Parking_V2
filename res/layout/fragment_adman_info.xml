@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="姓名: "
+            android:text="公司: "
             android:textSize="20sp" />
 
         <TextView
@@ -74,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="我的??? ："
+                android:text="广告详情 ："
                 android:textSize="20sp" />
 
             <ProgressBar
@@ -83,11 +83,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:visibility="invisible"
                 android:indeterminateDrawable="@drawable/progress_loading" />
         </LinearLayout>
 
         <ListView
-            android:id="@+id/lv_cars"
+            android:id="@+id/lv_bidding"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"

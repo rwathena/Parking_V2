@@ -59,7 +59,7 @@ public class AdmanInfoFragment extends BaseFragment implements OnLongClickListen
     private TextView name;
     private TextView phoneNum;
     private TextView IdNum;
-    private ListView listViewCars;
+    private ListView listViewBiddings;
     private ProgressBar loadingBar;
     private Button btSignout;
 
@@ -86,7 +86,7 @@ public class AdmanInfoFragment extends BaseFragment implements OnLongClickListen
         IdNum.setText(mainActivity.me.getIdentityNum());
         IdNum.setOnLongClickListener(this);
 
-        listViewCars = (ListView) mainView.findViewById(R.id.lv_cars);
+        listViewBiddings = (ListView) mainView.findViewById(R.id.lv_bidding);
         btSignout = (Button) mainView.findViewById(R.id.btn_signout);
         btSignout.setOnClickListener(new OnClickListener() {
             @Override

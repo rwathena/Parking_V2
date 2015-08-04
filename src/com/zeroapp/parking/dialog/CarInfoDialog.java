@@ -21,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.zeroapp.parking.R;
@@ -46,10 +47,11 @@ public class CarInfoDialog extends Dialog {
     private String cacelButtonText;
     private ClickListenerInterface clickListenerInterface;
     private CarInfo car;
+    private EditText carNumEditText;
 
     public interface ClickListenerInterface {
 
-        public void doConfirm();
+        public void doConfirm(String carNumString);
 
         public void doCancel();
     }
@@ -77,6 +79,7 @@ public class CarInfoDialog extends Dialog {
         TextView tvTitle = (TextView) view.findViewById(R.id.title);
         TextView tvConfirm = (TextView) view.findViewById(R.id.confirm);
         TextView tvCancel = (TextView) view.findViewById(R.id.cancel);
+        carNumEditText = (EditText)view.findViewById(R.id.carnuminfo);
 
         tvTitle.setText(title);
         tvConfirm.setText(confirmButtonText);
@@ -104,7 +107,7 @@ public class CarInfoDialog extends Dialog {
             int id = v.getId();
             switch (id) {
                 case R.id.confirm:
-                    clickListenerInterface.doConfirm();
+                    clickListenerInterface.doConfirm(carNumEditText.getText().toString().trim());
                     break;
                 case R.id.cancel:
                     clickListenerInterface.doCancel();

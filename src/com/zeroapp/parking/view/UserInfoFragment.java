@@ -134,7 +134,7 @@ public class UserInfoFragment extends BaseFragment implements OnLongClickListene
                     dialog.setClicklistener(new CarInfoDialog.ClickListenerInterface() {
 
                         @Override
-                        public void doConfirm() {
+                        public void doConfirm(String s) {
                             dialog.dismiss();
                             // TODO
                         }
@@ -150,13 +150,14 @@ public class UserInfoFragment extends BaseFragment implements OnLongClickListene
                     dialog.setClicklistener(new CarInfoDialog.ClickListenerInterface() {
 
                         @Override
-                        public void doConfirm() {
+                        public void doConfirm(String s) {
                             dialog.dismiss();
                             CarInfo newcar = new CarInfo();
-                            newcar.setCarNum("testcar");
+                            newcar.setCarNum(s);
                             newcar.setCarType("SUV");
                             newcar.setCarValue(300000);
                             newcar.setParkingArea("shinan");
+                            newcar.setUserID(mainActivity.me.getUserID());
                             ClientServerMessage m = new ClientServerMessage();
                             m.setMessageType(MessageConst.MessageType.MSG_TYPE_USER_ADD_CARS);
                             m.setMessageContent(JsonTool.getString(newcar));
